@@ -44,7 +44,7 @@ namespace FlightInventory.Controllers
                 {
                     using (var scope = new TransactionScope())
                     {
-                        _InventorydbContext.BlockAirline(tblAirLine);
+                        _InventorydbContext.UpdateAirline(tblAirLine);
                         scope.Complete();
                         return new OkResult();
                     }
@@ -83,7 +83,7 @@ namespace FlightInventory.Controllers
 
 
         [HttpPost]
-        [Route("addInventory")]
+        [Route("AddInventory")]
         public IActionResult AddInventory([FromBody] TblInventory tblInventory)
         {
             using (var scope = new TransactionScope())
@@ -94,5 +94,27 @@ namespace FlightInventory.Controllers
             }
         }
 
+        [HttpPut]
+        [Route("UpdateInventory")]
+        public IActionResult UpdateInventory([FromBody] TblInventory tblInventory)
+        {
+            try
+            {
+                if (tblInventory != null)
+                {
+                    using (var scope = new TransactionScope())
+                    {
+                        _InventorydbContext.UpdateInventory(tblInventory);
+                        scope.Complete();
+                        return new OkResult();
+                    }
+                }
+                return new NoContentResult();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { Response = "Error", ResponseMessage = ex.Message });
+            }
+        }
     }
 }
