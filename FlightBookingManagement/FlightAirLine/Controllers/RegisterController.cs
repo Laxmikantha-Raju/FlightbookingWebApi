@@ -27,7 +27,7 @@ namespace FlightAirLine.Controllers
             {
                 _Users.InsertUsers(tblUserDetail);
                 scope.Complete();
-                return CreatedAtAction(nameof(Get), new { id = tblUserDetail.UserId }, tblUserDetail);
+                return CreatedAtAction(nameof(GetUserByID), new { id = tblUserDetail.UserId }, tblUserDetail);
             }
         }
         [HttpGet]
@@ -46,7 +46,7 @@ namespace FlightAirLine.Controllers
         }
         [HttpGet]
         [Route("GetUserByID")]
-        public IActionResult Get(int id)
+        public IActionResult GetUserByID(int id)
         {
             try
             {

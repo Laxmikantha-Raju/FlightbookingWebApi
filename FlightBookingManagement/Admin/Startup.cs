@@ -31,6 +31,7 @@ namespace Admin
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
             services.AddAuthentication();
             services.AddControllers();
             services.AddDbContext<FlightTicketBookingDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("FlightBookingDBConnection")));
@@ -74,7 +75,11 @@ namespace Admin
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
-
+            app.UseCors(x => x
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .SetIsOriginAllowed(origin => true) // allow any origin
+                .AllowCredentials()); // allow credentials
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

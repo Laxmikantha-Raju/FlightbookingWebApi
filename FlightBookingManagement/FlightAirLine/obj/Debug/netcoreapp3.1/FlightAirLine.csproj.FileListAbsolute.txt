@@ -1,3 +1,10 @@
+D:\DotNet\FlightBookingManagement\FlightAirLine\obj\Debug\netcoreapp3.1\FlightAirLine.csproj.AssemblyReference.cache
+D:\DotNet\FlightBookingManagement\FlightAirLine\obj\Debug\netcoreapp3.1\FlightAirLine.GeneratedMSBuildEditorConfig.editorconfig
+D:\DotNet\FlightBookingManagement\FlightAirLine\obj\Debug\netcoreapp3.1\FlightAirLine.AssemblyInfoInputs.cache
+D:\DotNet\FlightBookingManagement\FlightAirLine\obj\Debug\netcoreapp3.1\FlightAirLine.AssemblyInfo.cs
+D:\DotNet\FlightBookingManagement\FlightAirLine\obj\Debug\netcoreapp3.1\FlightAirLine.csproj.CoreCompileInputs.cache
+D:\DotNet\FlightBookingManagement\FlightAirLine\obj\Debug\netcoreapp3.1\FlightAirLine.MvcApplicationPartsAssemblyInfo.cs
+D:\DotNet\FlightBookingManagement\FlightAirLine\obj\Debug\netcoreapp3.1\FlightAirLine.MvcApplicationPartsAssemblyInfo.cache
 D:\DotNet\FlightBookingManagement\FlightAirLine\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\DotNet\FlightBookingManagement\FlightAirLine\bin\Debug\netcoreapp3.1\appsettings.json
 D:\DotNet\FlightBookingManagement\FlightAirLine\bin\Debug\netcoreapp3.1\FlightAirLine.exe
@@ -7,6 +14,7 @@ D:\DotNet\FlightBookingManagement\FlightAirLine\bin\Debug\netcoreapp3.1\FlightAi
 D:\DotNet\FlightBookingManagement\FlightAirLine\bin\Debug\netcoreapp3.1\FlightAirLine.dll
 D:\DotNet\FlightBookingManagement\FlightAirLine\bin\Debug\netcoreapp3.1\FlightAirLine.pdb
 D:\DotNet\FlightBookingManagement\FlightAirLine\bin\Debug\netcoreapp3.1\Consul.dll
+D:\DotNet\FlightBookingManagement\FlightAirLine\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\DotNet\FlightBookingManagement\FlightAirLine\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 D:\DotNet\FlightBookingManagement\FlightAirLine\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
 D:\DotNet\FlightBookingManagement\FlightAirLine\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -38,6 +46,7 @@ D:\DotNet\FlightBookingManagement\FlightAirLine\bin\Debug\netcoreapp3.1\System.C
 D:\DotNet\FlightBookingManagement\FlightAirLine\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 D:\DotNet\FlightBookingManagement\FlightAirLine\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
 D:\DotNet\FlightBookingManagement\FlightAirLine\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+D:\DotNet\FlightBookingManagement\FlightAirLine\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
 D:\DotNet\FlightBookingManagement\FlightAirLine\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
 D:\DotNet\FlightBookingManagement\FlightAirLine\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 D:\DotNet\FlightBookingManagement\FlightAirLine\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
@@ -51,15 +60,10 @@ D:\DotNet\FlightBookingManagement\FlightAirLine\bin\Debug\netcoreapp3.1\runtimes
 D:\DotNet\FlightBookingManagement\FlightAirLine\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 D:\DotNet\FlightBookingManagement\FlightAirLine\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\DotNet\FlightBookingManagement\FlightAirLine\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\DotNet\FlightBookingManagement\FlightAirLine\bin\Debug\netcoreapp3.1\Common.dll
 D:\DotNet\FlightBookingManagement\FlightAirLine\bin\Debug\netcoreapp3.1\DAL.dll
+D:\DotNet\FlightBookingManagement\FlightAirLine\bin\Debug\netcoreapp3.1\Common.pdb
 D:\DotNet\FlightBookingManagement\FlightAirLine\bin\Debug\netcoreapp3.1\DAL.pdb
-D:\DotNet\FlightBookingManagement\FlightAirLine\obj\Debug\netcoreapp3.1\FlightAirLine.csproj.AssemblyReference.cache
-D:\DotNet\FlightBookingManagement\FlightAirLine\obj\Debug\netcoreapp3.1\FlightAirLine.GeneratedMSBuildEditorConfig.editorconfig
-D:\DotNet\FlightBookingManagement\FlightAirLine\obj\Debug\netcoreapp3.1\FlightAirLine.AssemblyInfoInputs.cache
-D:\DotNet\FlightBookingManagement\FlightAirLine\obj\Debug\netcoreapp3.1\FlightAirLine.AssemblyInfo.cs
-D:\DotNet\FlightBookingManagement\FlightAirLine\obj\Debug\netcoreapp3.1\FlightAirLine.csproj.CoreCompileInputs.cache
-D:\DotNet\FlightBookingManagement\FlightAirLine\obj\Debug\netcoreapp3.1\FlightAirLine.MvcApplicationPartsAssemblyInfo.cs
-D:\DotNet\FlightBookingManagement\FlightAirLine\obj\Debug\netcoreapp3.1\FlightAirLine.MvcApplicationPartsAssemblyInfo.cache
 D:\DotNet\FlightBookingManagement\FlightAirLine\obj\Debug\netcoreapp3.1\staticwebassets\FlightAirLine.StaticWebAssets.Manifest.cache
 D:\DotNet\FlightBookingManagement\FlightAirLine\obj\Debug\netcoreapp3.1\staticwebassets\FlightAirLine.StaticWebAssets.xml
 D:\DotNet\FlightBookingManagement\FlightAirLine\obj\Debug\netcoreapp3.1\scopedcss\bundle\FlightAirLine.styles.css

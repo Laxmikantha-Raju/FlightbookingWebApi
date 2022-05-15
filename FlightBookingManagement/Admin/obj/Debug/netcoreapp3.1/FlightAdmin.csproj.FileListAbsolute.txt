@@ -75,7 +75,6 @@ D:\DotNet\FlightBookingManagement\Admin\obj\Debug\netcoreapp3.1\staticwebassets\
 D:\DotNet\FlightBookingManagement\Admin\obj\Debug\netcoreapp3.1\staticwebassets\FlightAdmin.StaticWebAssets.xml
 D:\DotNet\FlightBookingManagement\Admin\obj\Debug\netcoreapp3.1\scopedcss\bundle\FlightAdmin.styles.css
 D:\DotNet\FlightBookingManagement\Admin\obj\Debug\netcoreapp3.1\FlightAdmin.RazorTargetAssemblyInfo.cache
-D:\DotNet\FlightBookingManagement\Admin\obj\Debug\netcoreapp3.1\FlightAdmin.csproj.CopyComplete
 D:\DotNet\FlightBookingManagement\Admin\obj\Debug\netcoreapp3.1\FlightAdmin.dll
 D:\DotNet\FlightBookingManagement\Admin\obj\Debug\netcoreapp3.1\FlightAdmin.pdb
 D:\DotNet\FlightBookingManagement\Admin\obj\Debug\netcoreapp3.1\FlightAdmin.genruntimeconfig.cache

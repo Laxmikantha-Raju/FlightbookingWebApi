@@ -1,7 +1,6 @@
 D:\DotNet\FlightBookingManagement\Common\bin\Debug\netcoreapp3.1\Common.deps.json
 D:\DotNet\FlightBookingManagement\Common\bin\Debug\netcoreapp3.1\Common.dll
 D:\DotNet\FlightBookingManagement\Common\bin\Debug\netcoreapp3.1\Common.pdb
-D:\DotNet\FlightBookingManagement\Common\obj\Debug\netcoreapp3.1\Common.csproj.AssemblyReference.cache
 D:\DotNet\FlightBookingManagement\Common\obj\Debug\netcoreapp3.1\Common.GeneratedMSBuildEditorConfig.editorconfig
 D:\DotNet\FlightBookingManagement\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfoInputs.cache
 D:\DotNet\FlightBookingManagement\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfo.cs

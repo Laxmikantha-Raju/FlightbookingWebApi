@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\DotNet\FlightBookingManagement\FlightApiGateWay\bin\Release\netcoreapp3.1\publish\</_PublishTargetUrl>
+    <History>True|2022-05-15T15:30:32.5804348Z;True|2022-05-15T20:45:39.5002463+05:30;True|2022-05-15T20:43:23.5552547+05:30;</History>
+  </PropertyGroup>
+</Project>

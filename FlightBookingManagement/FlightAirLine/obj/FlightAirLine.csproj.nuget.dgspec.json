@@ -4,14 +4,14 @@
     "D:\\DotNet\\FlightBookingManagement\\FlightAirLine\\FlightAirLine.csproj": {}
   },
   "projects": {
-    "D:\\DotNet\\FlightBookingManagement\\DAL\\DAL.csproj": {
+    "D:\\DotNet\\FlightBookingManagement\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DotNet\\FlightBookingManagement\\DAL\\DAL.csproj",
-        "projectName": "DAL",
-        "projectPath": "D:\\DotNet\\FlightBookingManagement\\DAL\\DAL.csproj",
+        "projectUniqueName": "D:\\DotNet\\FlightBookingManagement\\Common\\Common.csproj",
+        "projectName": "Common",
+        "projectPath": "D:\\DotNet\\FlightBookingManagement\\Common\\Common.csproj",
         "packagesPath": "C:\\Users\\cogdotnet09\\.nuget\\packages\\",
-        "outputPath": "D:\\DotNet\\FlightBookingManagement\\DAL\\obj\\",
+        "outputPath": "D:\\DotNet\\FlightBookingManagement\\Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -58,19 +58,17 @@
               "target": "Package",
               "version": "[2.2.0, )"
             },
-            "Microsoft.EntityFrameworkCore": {
+            "Microsoft.Extensions.Configuration.Abstractions": {
               "target": "Package",
-              "version": "[5.0.16, )"
+              "version": "[6.0.0, )"
             },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
-              "version": "[5.0.16, )"
+              "version": "[6.0.0, )"
             },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
+            "Microsoft.Extensions.Logging.Abstractions": {
               "target": "Package",
-              "version": "[5.0.16, )"
+              "version": "[6.0.1, )"
             }
           },
           "imports": [
@@ -122,8 +120,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\DotNet\\FlightBookingManagement\\DAL\\DAL.csproj": {
-                "projectPath": "D:\\DotNet\\FlightBookingManagement\\DAL\\DAL.csproj"
+              "D:\\DotNet\\FlightBookingManagement\\Common\\Common.csproj": {
+                "projectPath": "D:\\DotNet\\FlightBookingManagement\\Common\\Common.csproj"
               }
             }
           }
@@ -138,6 +136,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.24, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.16, )"

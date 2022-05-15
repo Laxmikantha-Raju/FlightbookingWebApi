@@ -32,12 +32,12 @@ namespace FlightAirLine
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddCors();
             services.AddControllers();
             services.AddDbContext<FlightTicketBookingDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("FlightBookingDBConnection")));
             services.AddTransient<IUsers, UsersRepository>();
             services.AddSwaggerGen();
-            //services.AddConsulConfig(Configuration);
+            services.AddConsulConfig(Configuration);
 
         }
 
@@ -54,9 +54,13 @@ namespace FlightAirLine
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
-
+            app.UseCors(x => x
+               .AllowAnyMethod()
+               .AllowAnyHeader()
+               .SetIsOriginAllowed(origin => true) // allow any origin
+               .AllowCredentials()); // allow credentials
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

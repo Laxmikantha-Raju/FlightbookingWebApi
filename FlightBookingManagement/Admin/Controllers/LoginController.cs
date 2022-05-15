@@ -10,8 +10,7 @@ using System.Threading.Tasks;
 
 namespace Admin.Controllers
 {
-    //[Route("api/v1.0/flight/admin/[controller]")]
-    [Route("api/[controller]")]
+    [Route("api/v1.0/flight/Admin/Login")] 
     [ApiController]
     public class LoginController : ControllerBase
     {
@@ -47,29 +46,29 @@ namespace Admin.Controllers
             }
         }
 
-        [AllowAnonymous]
-        [HttpPost]
-        [Route("authenticate")]
-        public IActionResult Authenticate(TblUserDetail tblUserdetail)
-        {
-            try
-            {
-                IEnumerable<TblUserDetail> tblusr = _dbContext.TblUserDetails.Where(x => x.UserEmailid == tblUserdetail.UserEmailid && x.UserPassword == tblUserdetail.UserPassword);
-                if (tblusr.ToList().Count == 0)
-                {
-                    return Unauthorized();
-                }
-                var token = iJWTManager.Authenticate(tblUserdetail);
-                if (token == null)
-                {
-                    return Unauthorized();
-                }
-                return Ok(token);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(new { Response = "Error", ResponseMessage = ex.Message });
-            }
-        }
+        //[AllowAnonymous]
+        //[HttpPost]
+        //[Route("authenticate")]
+        //public IActionResult Authenticate(TblUserDetail tblUserdetail)
+        //{
+        //    try
+        //    {
+        //        IEnumerable<TblUserDetail> tblusr = _dbContext.TblUserDetails.Where(x => x.UserEmailid == tblUserdetail.UserEmailid && x.UserPassword == tblUserdetail.UserPassword);
+        //        if (tblusr.ToList().Count == 0)
+        //        {
+        //            return Unauthorized();
+        //        }
+        //        var token = iJWTManager.Authenticate(tblUserdetail);
+        //        if (token == null)
+        //        {
+        //            return Unauthorized();
+        //        }
+        //        return Ok(token);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return BadRequest(new { Response = "Error", ResponseMessage = ex.Message });
+        //    }
+        //}
     }
 }

@@ -20,7 +20,7 @@ namespace FlightApiGateWay
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
+                    webBuilder.UseStartup<Startup>().UseUrls();
                     webBuilder.ConfigureAppConfiguration(config => config.AddJsonFile("ocelot.json"));
                 }).ConfigureLogging(logging => logging.AddConsole());
     }

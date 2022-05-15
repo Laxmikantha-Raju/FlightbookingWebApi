@@ -18,32 +18,58 @@
     },
     {
       "UseServiceDiscovery": true,
-      "DownstreamPathTemplate": "/api/v1.0/flight/Admin/Login",
+      "DownstreamPathTemplate": "/api/v1.0/flight/Admin/Login/{Action}",
       "DownstreamScheme": "http",
       "ServiceName": "AdminService",
-      "UpstreamPathTemplate": "/api/gatway/v1.0/flight/Admin/Login",
+      "UpstreamPathTemplate": "/api/gatway/v1.0/flight/Admin/Login/{Action}",
       "UpstreamHttpMethod": [ "Post" ]
     },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/v1.0/flight/inventory/AddAirLine",
+      "DownstreamScheme": "http",
+      "ServiceName": "InventoryService",
+      "UpstreamPathTemplate": "/api/gatway/v1.0/flight/airline/inventory/AddAirLine",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/v1.0/flight/inventory/UpdateAirline",
+      "DownstreamScheme": "http",
+      "ServiceName": "InventoryService",
+      "UpstreamPathTemplate": "/api/gatway/v1.0/flight/airline/inventory/UpdateAirline",
+      "UpstreamHttpMethod": [ "Put" ]
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/v1.0/flight/inventory/BlockAirline",
+      "DownstreamScheme": "http",
+      "ServiceName": "InventoryService",
+      "UpstreamPathTemplate": "/api/gatway/v1.0/flight/airline/inventory/BlockAirline",
+      "UpstreamHttpMethod": [ "Put" ]
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/v1.0/flight/inventory/AddInventory",
+      "DownstreamScheme": "http",
+      "ServiceName": "InventoryService",
+      "UpstreamPathTemplate": "/api/gatway/v1.0/flight/airline/inventory/AddInventory",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/v1.0/flight/inventory/UpdateInventory",
+      "DownstreamScheme": "http",
+      "ServiceName": "InventoryService",
+      "UpstreamPathTemplate": "/api/gatway/v1.0/flight/airline/inventory/UpdateInventory",
+      "UpstreamHttpMethod": [ "Put" ]
+    },
+
+
 
     {
       "UseServiceDiscovery": true,
-      "DownstreamPathTemplate": "/api/v1.0/airline/inventory",
-      "DownstreamScheme": "http",
-      "ServiceName": "InventoryService",
-      "UpstreamPathTemplate": "/api/gatway/v1.0/flight/airline/inventory",
-      "UpstreamHttpMethod": [ "Get" ]
-    },
-    {
-      "UseServiceDiscovery": true,
-      "DownstreamPathTemplate": "/api/v1.0/airline/inventory/add",
-      "DownstreamScheme": "http",
-      "ServiceName": "InventoryService",
-      "UpstreamPathTemplate": "/api/gatway/v1.0/flight/airline/inventory/add",
-      "UpstreamHttpMethod": [ "Post" ]
-    },
-    {
-      "UseServiceDiscovery": true,
-      "DownstreamPathTemplate": "/api/v1.0/search",
+      "DownstreamPathTemplate": "/api/v1.0/flight/search",
       "DownstreamScheme": "http",
       "ServiceName": "InventoryService",
       "UpstreamPathTemplate": "/api/gatway/v1.0/flight/search",
@@ -58,6 +84,7 @@
       "UpstreamPathTemplate": "/api/gatway/v1.0/flight/booking",
       "UpstreamHttpMethod": [ "Get" ]
     },
+
     {
       "UseServiceDiscovery": true,
       "DownstreamPathTemplate": "/api/v1.0/flight/booking/{flightid}",
@@ -98,4 +125,11 @@
       "Type": "Consul"
     }
   }
+  //"GlobalConfiguration": {
+  //  "ServiceDiscoveryProvider": {
+  //    "Host": "localhost",
+  //    "Port": "29519",
+  //    "Type": "ApiGateWay"
+  //  }
+  //}
 }
