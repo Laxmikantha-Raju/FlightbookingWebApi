@@ -36,26 +36,26 @@ namespace FlightBooking
             services.AddControllers();
             services.AddDbContext<FlightTicketBookingDBContext>(o => o.UseSqlServer(Configuration.GetConnectionString("FlightBookingDBConnection")));
             services.AddTransient<IBookingRepository, BookingRepository>(); 
-            services.AddAuthentication(x =>
-            {
-                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            }).AddJwtBearer(o =>
-            {
+            //services.AddAuthentication(x =>
+            //{
+            //    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+            //    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            //}).AddJwtBearer(o =>
+            //{
 
-                var key = Encoding.UTF8.GetBytes(Configuration["JWT:Key"]);
-                o.SaveToken = true;
-                o.TokenValidationParameters = new TokenValidationParameters
-                {
-                    ValidateIssuer = false,
-                    ValidateAudience = false,
-                    ValidateLifetime = true,
-                    ValidateIssuerSigningKey = true,
-                    ValidIssuer = Configuration["JWT:Issuer"],
-                    ValidAudience = Configuration["JWT:Audience"],
-                    IssuerSigningKey = new SymmetricSecurityKey(key)
-                };
-            });
+            //    var key = Encoding.UTF8.GetBytes(Configuration["JWT:Key"]);
+            //    o.SaveToken = true;
+            //    o.TokenValidationParameters = new TokenValidationParameters
+            //    {
+            //        ValidateIssuer = false,
+            //        ValidateAudience = false,
+            //        ValidateLifetime = true,
+            //        ValidateIssuerSigningKey = true,
+            //        ValidIssuer = Configuration["JWT:Issuer"],
+            //        ValidAudience = Configuration["JWT:Audience"],
+            //        IssuerSigningKey = new SymmetricSecurityKey(key)
+            //    };
+            //});
             services.AddSwaggerGen();
             services.AddConsulConfig(Configuration);
         }

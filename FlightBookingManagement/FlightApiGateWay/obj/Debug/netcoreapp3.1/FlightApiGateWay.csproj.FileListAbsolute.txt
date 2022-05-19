@@ -22,6 +22,7 @@ D:\DotNet\FlightBookingManagement\FlightApiGateWay\bin\Debug\netcoreapp3.1\Ocelo
 D:\DotNet\FlightBookingManagement\FlightApiGateWay\bin\Debug\netcoreapp3.1\Ocelot.Provider.Consul.dll
 D:\DotNet\FlightBookingManagement\FlightApiGateWay\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netstandard1.3\System.Net.Http.WinHttpHandler.dll
 D:\DotNet\FlightBookingManagement\FlightApiGateWay\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard1.3\System.Net.Http.WinHttpHandler.dll
+D:\DotNet\FlightBookingManagement\FlightApiGateWay\obj\Debug\netcoreapp3.1\FlightApiGateWay.csproj.AssemblyReference.cache
 D:\DotNet\FlightBookingManagement\FlightApiGateWay\obj\Debug\netcoreapp3.1\FlightApiGateWay.GeneratedMSBuildEditorConfig.editorconfig
 D:\DotNet\FlightBookingManagement\FlightApiGateWay\obj\Debug\netcoreapp3.1\FlightApiGateWay.AssemblyInfoInputs.cache
 D:\DotNet\FlightBookingManagement\FlightApiGateWay\obj\Debug\netcoreapp3.1\FlightApiGateWay.AssemblyInfo.cs
@@ -50,4 +51,3 @@ D:\DotNet\FlightBookingManagement\FlightApiGateWay\obj\Debug\netcoreapp3.1\Fligh
 D:\DotNet\FlightBookingManagement\FlightApiGateWay\obj\Debug\netcoreapp3.1\FlightApiGateWay.dll
 D:\DotNet\FlightBookingManagement\FlightApiGateWay\obj\Debug\netcoreapp3.1\FlightApiGateWay.pdb
 D:\DotNet\FlightBookingManagement\FlightApiGateWay\obj\Debug\netcoreapp3.1\FlightApiGateWay.genruntimeconfig.cache
-D:\DotNet\FlightBookingManagement\FlightApiGateWay\obj\Debug\netcoreapp3.1\FlightApiGateWay.csproj.AssemblyReference.cache

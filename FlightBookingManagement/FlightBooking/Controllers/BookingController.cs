@@ -11,8 +11,8 @@ using System.Transactions;
 
 namespace FlightBooking.Controllers
 {
-    [Authorize]
-    [Route("api/[controller]")]
+    //[Authorize]
+    [Route("api/v1.0/flight/airline/[controller]")]
     [ApiController]
     public class BookingController : ControllerBase
     {
@@ -23,8 +23,9 @@ namespace FlightBooking.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get()
-        {
+        [Route("GetAllBooking")]
+        public IActionResult GetAllBooking()
+       {
             try
             {
                 var allBookings = _repository.GetBookingDetail();
@@ -40,8 +41,9 @@ namespace FlightBooking.Controllers
         }
 
         [HttpPost]
-        [Route("{flightid}")]
-        public string Post([FromBody] BookingPassengerDetails passengerDetail)
+        //[Route("{flightid}")]
+        [Route("BookTicket")]
+        public string BookTicket([FromBody] BookingPassengerDetails passengerDetail)
         {
             using (var scope = new TransactionScope())
             {
@@ -86,6 +88,20 @@ namespace FlightBooking.Controllers
                 return BadRequest(new { Response = "Error", ResponseMessage = ex.Message });
             }
         }
+        [HttpPut]
+        [Route("[Action]/{Id}")]
+        public IActionResult CancelById(int Id)
+        {
+            try
+            {
+                _repository.CancelById(Id);
+                return new OkResult();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { Response = "Error", ResponseMessage = ex.Message });
+            }
+        }
 
         [HttpGet]
         [Route("[Action]/{pnr}")]
@@ -104,5 +120,31 @@ namespace FlightBooking.Controllers
                 return BadRequest(new { Response = "Error", ResponseMessage = ex.Message });
             }
         }
+        [HttpGet]
+        [Route("discount")]
+        public async Task<IActionResult> GetDiscountList(int id)
+        {
+            var discountList = await _repository.GetDiscountList();
+
+            return Ok(discountList);
+
+        }
+        //[HttpGet]
+        //[Route("[Action]/{id}")]
+        //public IActionResult GetAllBookingById(int id)
+        //{
+        //    try
+        //    {
+        //        var result = _repository.GetAllBookingById(id);
+        //        if (result != null)
+        //            return new OkObjectResult(result);
+        //        else
+        //            return new NotFoundResult();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return BadRequest(new { Response = "Error", ResponseMessage = ex.Message });
+        //    }
+        //}
     }
 }

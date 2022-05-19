@@ -57,10 +57,10 @@ namespace FlightAirLine
             app.UseAuthentication();
             app.UseAuthorization();
             app.UseCors(x => x
-               .AllowAnyMethod()
-               .AllowAnyHeader()
-               .SetIsOriginAllowed(origin => true) // allow any origin
-               .AllowCredentials()); // allow credentials
+             .AllowAnyMethod()
+             .AllowAnyHeader()
+             .SetIsOriginAllowed(origin => true) // allow any origin
+             .AllowCredentials()); // allow credentials
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

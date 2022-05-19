@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace DAL.Repository
 {
@@ -60,7 +61,26 @@ namespace DAL.Repository
                 }
             }
         }
-
+        public void CancelById(int id)
+        {
+            var pnrdetail = _BookingContext.TblBookings.Where(x => x.BookingId == id).ToList();
+            if (pnrdetail != null)
+            {
+                foreach (var cancel in pnrdetail)
+                {
+                    var persondetail = _BookingContext.TblPassengers.Where(x => x.PassengerPnr == cancel.BookingPnr).ToList();
+                    cancel.BookingIsActiceYn = "N";
+                    _BookingContext.TblBookings.Update(cancel);
+                    SaveChanges();
+                    foreach (var passenger in persondetail)
+                    {
+                        passenger.PassengerIsActiceYn = "N";
+                        _BookingContext.TblPassengers.Update(passenger);
+                        SaveChanges();
+                    }
+                }
+            }
+        }
         public BookingPassengerDetails GetBookingDetailFromPNR(string pnr)
         {
 
@@ -78,11 +98,13 @@ namespace DAL.Repository
             _BookingContext.SaveChanges();
         }
 
-        IEnumerable<BookingPassengerDetails> IBookingRepository.GetBookingDetail()
+        ICollection<TblBooking> IBookingRepository.GetBookingDetail()
         {
-            return (IEnumerable<BookingPassengerDetails>)_BookingContext.TblBookings.ToList();
+            //ICollection<TblBooking> tblbooking = _BookingContext.TblBookings.Where(x=> x.BookingName == name).ToList();
+            ICollection<TblBooking> tblbooking = _BookingContext.TblBookings.ToList();
+            return tblbooking;
         }
-
+      
         public BookingPassengerDetails GetUserHistory(string emailId)
         {
             BookingPassengerDetails bookingPassengerDetails = new BookingPassengerDetails();
@@ -100,5 +122,23 @@ namespace DAL.Repository
             }
             return result;
         }
+        public async Task<List<Discount>> GetDiscountList()
+        {
+            try
+            {
+                //List<Discount> discountList = await _BookingContext.Discount.ToListAsync();
+                List<Discount> discountList = new List<Discount>();
+                return discountList;
+
+            }
+
+
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+        }
+
     }
 }

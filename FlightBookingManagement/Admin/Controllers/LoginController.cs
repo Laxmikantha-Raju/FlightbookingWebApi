@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Admin.Controllers
 {
-    [Route("api/v1.0/flight/Admin/Login")] 
+    [Route("api/v1.0/flight/Admin/[Controller]")]
     [ApiController]
     public class LoginController : ControllerBase
     {
@@ -28,17 +28,22 @@ namespace Admin.Controllers
         {
             try
             {
-                IEnumerable<TblUserDetail> tblusr = _dbContext.TblUserDetails.Where(x => x.UserEmailid == user.UserEmailid && x.UserPassword == user.UserPassword);
+                ICollection<TblUserDetail> tblusr = _dbContext.TblUserDetails.Where(x => x.UserEmailid == user.UserEmailid && x.UserPassword == user.UserPassword).ToList<TblUserDetail>();
                 if (tblusr.ToList().Count == 0)
                 {
                     return Unauthorized();
                 }
-                var token = iJWTManager.Authenticate(user);
-                if (token == null)
+                var Token = iJWTManager.Authenticate(user);
+                if (Token == null)
                 {
                     return Unauthorized();
                 }
-                return Ok(token);
+                Tokens LoginToken = Token;
+
+                UserToken userToken = new UserToken();         
+                userToken.ICToken = LoginToken;
+                userToken.ICTblUserDetails = (ICollection<TblUserDetail>)tblusr;
+                return Ok(userToken);
             }
             catch (Exception ex)
             {

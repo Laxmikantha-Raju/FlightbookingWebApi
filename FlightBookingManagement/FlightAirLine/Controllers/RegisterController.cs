@@ -27,7 +27,8 @@ namespace FlightAirLine.Controllers
             {
                 _Users.InsertUsers(tblUserDetail);
                 scope.Complete();
-                return CreatedAtAction(nameof(GetUserByID), new { id = tblUserDetail.UserId }, tblUserDetail);
+                //return CreatedAtAction(nameof(GetUserByID), new { id = tblUserDetail.UserId }, tblUserDetail);
+                return Ok();
             }
         }
         [HttpGet]

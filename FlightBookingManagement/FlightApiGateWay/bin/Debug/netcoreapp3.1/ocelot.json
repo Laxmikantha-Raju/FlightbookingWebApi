@@ -2,27 +2,36 @@
   "Routes": [
     {
       "UseServiceDiscovery": true,
-      "DownstreamPathTemplate": "/api/v1.0/flight/airline/Register/",
+      "DownstreamPathTemplate": "/api/v1.0/flight/airline/Register/{Action}",
       "DownstreamScheme": "http",
       "ServiceName": "RegisterService",
-      "UpstreamPathTemplate": "/api/gatway/v1.0/flight/airline/Register/",
-      "UpstreamHttpMethod": [ "Get" ]
+      "UpstreamPathTemplate": "/api/gatway/v1.0/flight/airline/Register/{Action}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
     },
     {
       "UseServiceDiscovery": true,
-      "DownstreamPathTemplate": "/api/v1.0/flight/airline/Register/",
+      "DownstreamPathTemplate": "/api/v1.0/flight/airline/Register/{Action}/{Id}",
       "DownstreamScheme": "http",
       "ServiceName": "RegisterService",
-      "UpstreamPathTemplate": "/api/gatway/v1.0/flight/airline/Register/",
-      "UpstreamHttpMethod": [ "Post" ]
+      "UpstreamPathTemplate": "/api/gatway/v1.0/flight/airline/Register/{Action}/{Id}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
     },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/v1.0/flight/airline/Register",
+      "DownstreamScheme": "http",
+      "ServiceName": "RegisterService",
+      "UpstreamPathTemplate": "/api/gatway/v1.0/flight/airline/Register",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+    },
+
     {
       "UseServiceDiscovery": true,
       "DownstreamPathTemplate": "/api/v1.0/flight/Admin/Login/{Action}",
       "DownstreamScheme": "http",
       "ServiceName": "AdminService",
       "UpstreamPathTemplate": "/api/gatway/v1.0/flight/Admin/Login/{Action}",
-      "UpstreamHttpMethod": [ "Post" ]
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
     },
     {
       "UseServiceDiscovery": true,
@@ -125,11 +134,5 @@
       "Type": "Consul"
     }
   }
-  //"GlobalConfiguration": {
-  //  "ServiceDiscoveryProvider": {
-  //    "Host": "localhost",
-  //    "Port": "29519",
-  //    "Type": "ApiGateWay"
-  //  }
-  //}
+
 }

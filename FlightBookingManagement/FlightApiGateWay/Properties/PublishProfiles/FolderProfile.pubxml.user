@@ -5,6 +5,6 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>D:\DotNet\FlightBookingManagement\FlightApiGateWay\bin\Release\netcoreapp3.1\publish\</_PublishTargetUrl>
-    <History>True|2022-05-15T15:30:32.5804348Z;True|2022-05-15T20:45:39.5002463+05:30;True|2022-05-15T20:43:23.5552547+05:30;</History>
+    <History>True|2022-05-15T20:06:49.4151907Z;True|2022-05-16T01:15:32.3298277+05:30;True|2022-05-16T00:56:10.3190073+05:30;True|2022-05-16T00:50:06.7510921+05:30;True|2022-05-16T00:37:49.7345551+05:30;True|2022-05-15T21:00:32.5804348+05:30;True|2022-05-15T20:45:39.5002463+05:30;True|2022-05-15T20:43:23.5552547+05:30;</History>
   </PropertyGroup>
 </Project>

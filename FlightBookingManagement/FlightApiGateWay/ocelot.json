@@ -31,7 +31,7 @@
       "DownstreamScheme": "http",
       "ServiceName": "AdminService",
       "UpstreamPathTemplate": "/api/gatway/v1.0/flight/Admin/Login/{Action}",
-      "UpstreamHttpMethod": [ "Post" ]
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
     },
     {
       "UseServiceDiscovery": true,
@@ -134,11 +134,5 @@
       "Type": "Consul"
     }
   }
-  //"GlobalConfiguration": {
-  //  "ServiceDiscoveryProvider": {
-  //    "Host": "localhost",
-  //    "Port": "29519",
-  //    "Type": "ApiGateWay"
-  //  }
-  //}
+
 }

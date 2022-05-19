@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace FlightInventory.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/v1.0/flight/[controller]")]
     [ApiController]
     public class SearchController : ControllerBase
@@ -23,14 +23,36 @@ namespace FlightInventory.Controllers
         }
 
 
+        //[HttpGet]
+        //[Route("GetAllFlightBasedOnPlaces")]
+        //public IActionResult GetAllFlightBasedOnPlaces(string fromplace, string toplace)
+        //{
+        //    var flights = _inventoryRepository.GetAllFlightBasedOnPlaces(fromplace, toplace);
+        //    if (flights.Count() == 0)
+        //        return new NoContentResult();
+        //    else
+        //        return new OkObjectResult(flights);
+        //}
         [HttpGet]
-        public IActionResult Get(string fromplace, string toplace)
+        [Route("GetAllFlight")]
+        public IActionResult GetAllFlight()
         {
-            var flights = _inventoryRepository.GetAllFlightBasedOnPlaces(fromplace, toplace);
+            var flights = _inventoryRepository.GetInventory();
             if (flights.Count() == 0)
                 return new NoContentResult();
             else
                 return new OkObjectResult(flights);
         }
+        [HttpGet]
+        [Route("GetAllAirline")]
+        public IActionResult GetAllAirline()
+        {
+            var airLines = _inventoryRepository.GetAirlines();
+            if (airLines.Count() == 0)
+                return new NoContentResult();
+            else
+                return new OkObjectResult(airLines);
+        }
+
     }
 }

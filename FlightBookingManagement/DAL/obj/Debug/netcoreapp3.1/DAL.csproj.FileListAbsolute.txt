@@ -50,7 +50,6 @@ D:\DotNet\FlightBookingManagement\DAL\bin\Debug\netcoreapp3.1\runtimes\win-x86\n
 D:\DotNet\FlightBookingManagement\DAL\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 D:\DotNet\FlightBookingManagement\DAL\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\DotNet\FlightBookingManagement\DAL\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-D:\DotNet\FlightBookingManagement\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.AssemblyReference.cache
 D:\DotNet\FlightBookingManagement\DAL\obj\Debug\netcoreapp3.1\DAL.GeneratedMSBuildEditorConfig.editorconfig
 D:\DotNet\FlightBookingManagement\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfoInputs.cache
 D:\DotNet\FlightBookingManagement\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfo.cs
@@ -78,3 +77,4 @@ D:\DotNet\FlightBookingManagement\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.CopyCom
 D:\DotNet\FlightBookingManagement\DAL\obj\Debug\netcoreapp3.1\DAL.dll
 D:\DotNet\FlightBookingManagement\DAL\obj\Debug\netcoreapp3.1\DAL.pdb
 D:\DotNet\FlightBookingManagement\DAL\obj\Debug\netcoreapp3.1\DAL.genruntimeconfig.cache
+D:\DotNet\FlightBookingManagement\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.AssemblyReference.cache

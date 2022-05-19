@@ -15,6 +15,7 @@ using System.Threading.Tasks;
 using DAL.Models;
 using DAL;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 
 namespace FlightInventory
 {
@@ -30,11 +31,12 @@ namespace FlightInventory
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            
             services.AddCors();
             services.AddControllers();
             services.AddDbContext<FlightTicketBookingDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("FlightBookingDBConnection")));
             services.AddTransient<IInventoryRepository, InventoryRepository>();
-            services.AddSwaggerGen();
+            //services.AddSwaggerGen();
             services.AddAuthentication(x =>
             {
                 x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -66,8 +68,9 @@ namespace FlightInventory
                 app.UseDeveloperExceptionPage();
             }
             app.UseConsul(Configuration);
-            app.UseSwagger();
-            app.UseSwaggerUI();
+            //app.UseSwagger();
+            //app.UseSwaggerUI();
+            
             app.UseHttpsRedirection();
 
             app.UseRouting();

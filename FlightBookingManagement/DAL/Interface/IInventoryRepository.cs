@@ -10,7 +10,8 @@ namespace DAL
         public IEnumerable<TblInventory> GetInventory();
         public IEnumerable<TblAirLine> GetAirlines();
         public IEnumerable<TblInventory> GetAllFlightBasedOnPlaces(string fromplace, string toplace);
-        public void BlockAirline(TblAirLine tbl);
+        public void BlockAirline(int tbl);
+        public void UnBlockAirline(int tbl);
         public void UpdateAirline(TblAirLine tbl);
         public void UpdateInventory(TblInventory tbl);
     }

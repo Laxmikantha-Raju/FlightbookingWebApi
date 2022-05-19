@@ -15,7 +15,7 @@ namespace DAL
         }
         public IEnumerable<TblAirLine> GetAirlines()
         {
-            return _inventoryContext.TblAirLines.ToList().Where(x => x.AirlineIsActiveYn == "Y");
+            return _inventoryContext.TblAirLines.ToList();//.Where(x => x.AirlineIsActiveYn == "Y");
         }
 
         public void AddAirlines(TblAirLine tbl)
@@ -42,12 +42,35 @@ namespace DAL
         {
             return _inventoryContext.TblInventories.Where(x => x.FlightToPlace.ToLower() == toplace.ToLower() && x.FlightFromPlace.ToLower() == fromplace.ToLower()).ToList();
         }
-        public void BlockAirline(TblAirLine tblAirLine)
+        public void BlockAirline(int id)
         {
-            var cols = _inventoryContext.TblAirLines.Where(w => w.AirlineNo == tblAirLine.AirlineNo);
+
+            var cols = _inventoryContext.TblAirLines.Where(w => w.AirlineNo == id);
+            foreach (var item in cols)
+            {
+                item.AirlineIsActiveYn = "N"; ;
+            }
+            Save();
+            var colsn = _inventoryContext.TblInventories.Where(w => w.FlightAirlineNo == id);
+            foreach (var items in colsn)
+            {
+                items.FlightIsActiveYn = "N"; ;
+            }
+            Save();
+
+        }
+        public void UnBlockAirline(int id)
+        {
+            var cols = _inventoryContext.TblAirLines.Where(w => w.AirlineNo ==id);
             foreach (var item in cols)
             {
                 item.AirlineIsActiveYn = "Y"; ;
+            }
+            Save();
+            var colsn = _inventoryContext.TblInventories.Where(w => w.FlightAirlineNo == id);
+            foreach (var items in colsn)
+            {
+                items.FlightIsActiveYn = "Y"; ;
             }
             Save();
         }

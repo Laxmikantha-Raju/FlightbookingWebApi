@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace DAL.Models
 {
-    public partial class TblUserDetail
+    public class TblUserDetail
     {
         public int UserId { get; set; }
         public string UserFirstName { get; set; }

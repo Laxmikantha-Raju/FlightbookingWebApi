@@ -11,7 +11,7 @@ using DAL;
 
 namespace FlightInventory.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/v1.0/flight/airline/[controller]")]
     [ApiController]
     public class InventoryController : ControllerBase
@@ -59,16 +59,42 @@ namespace FlightInventory.Controllers
 
 
         [HttpPut]
-        [Route("BlockAirline")]
-        public IActionResult BlockAirline([FromBody] TblAirLine tblAirLine)
+        //[Route("BlockAirline")]
+        //[Route("[Action]/{id}")]
+        //public IActionResult BlockAirline([FromBody] TblAirLine tblAirLine)
+        [Route("[Action]/{id}")]
+        public IActionResult BlockAirline(int id)
         {
             try
             {
-                if (tblAirLine != null)
+                if (id != 0)
                 {
                     using (var scope = new TransactionScope())
                     {
-                        _InventorydbContext.BlockAirline(tblAirLine);
+                        _InventorydbContext.BlockAirline(id);
+                        scope.Complete();
+                        return new OkResult();
+                    }
+                }
+                return new NoContentResult();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { Response = "Error", ResponseMessage = ex.Message });
+            }
+        }
+
+        [HttpPut]
+        [Route("[Action]/{id}")]
+        public IActionResult UnBlockAirline(int id)
+        {
+            try
+            {
+                if (id != 0)
+                {
+                    using (var scope = new TransactionScope())
+                    {
+                        _InventorydbContext.UnBlockAirline(id);
                         scope.Complete();
                         return new OkResult();
                     }
@@ -116,5 +142,6 @@ namespace FlightInventory.Controllers
                 return BadRequest(new { Response = "Error", ResponseMessage = ex.Message });
             }
         }
+
     }
 }
