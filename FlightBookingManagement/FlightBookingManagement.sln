@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightInventory", "FlightIn
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightApiGateWay", "FlightApiGateWay\FlightApiGateWay.csproj", "{9BD4FB88-08CB-49BF-B8D3-8C1A251D1020}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightAdmin", "Admin\FlightAdmin.csproj", "{B79C7D40-548D-44A3-BF2C-462184B5EC7F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{9BD4FB88-08CB-49BF-B8D3-8C1A251D1020}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BD4FB88-08CB-49BF-B8D3-8C1A251D1020}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9BD4FB88-08CB-49BF-B8D3-8C1A251D1020}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B79C7D40-548D-44A3-BF2C-462184B5EC7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B79C7D40-548D-44A3-BF2C-462184B5EC7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B79C7D40-548D-44A3-BF2C-462184B5EC7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B79C7D40-548D-44A3-BF2C-462184B5EC7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

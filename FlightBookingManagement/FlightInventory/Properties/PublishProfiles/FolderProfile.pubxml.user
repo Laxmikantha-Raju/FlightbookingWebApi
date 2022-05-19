@@ -5,6 +5,6 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>D:\DotNet\FlightBookingManagement\FlightInventory\bin\Release\netcoreapp3.1\publish\</_PublishTargetUrl>
-    <History>True|2022-05-19T09:28:46.5903739Z;True|2022-05-15T20:46:47.5242354+05:30;</History>
+    <History>True|2022-05-19T19:45:42.8752631Z;True|2022-05-19T14:58:46.5903739+05:30;True|2022-05-15T20:46:47.5242354+05:30;</History>
   </PropertyGroup>
 </Project>
